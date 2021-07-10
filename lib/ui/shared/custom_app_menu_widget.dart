@@ -47,11 +47,11 @@ class _CustomAppMenuWidgetState extends State<CustomAppMenuWidget> with SingleTi
               _MenuTitle(menuIsOpen: menuIsOpen, controller: controller),
               if (menuIsOpen) 
               ...[
-                CustomMenuItemWidget(text: 'Home', delay: 60, onPressed: () => pageProvider.goTo(1)),
-                CustomMenuItemWidget(text: 'About', delay: 120, onPressed: () => pageProvider.goTo(2)),
-                CustomMenuItemWidget(text: 'Pricing', delay: 180, onPressed: () => pageProvider.goTo(3)),
-                CustomMenuItemWidget(text: 'Contact', delay: 240, onPressed: () => pageProvider.goTo(4)),
-                CustomMenuItemWidget(text: 'Location', delay: 300, onPressed: () => pageProvider.goTo(5)),
+                CustomMenuItemWidget(text: 'Home', delay: 60, onPressed: () => pageProvider.goTo(0)),
+                CustomMenuItemWidget(text: 'About', delay: 120, onPressed: () => pageProvider.goTo(1)),
+                CustomMenuItemWidget(text: 'Pricing', delay: 180, onPressed: () => pageProvider.goTo(2)),
+                CustomMenuItemWidget(text: 'Contact', delay: 240, onPressed: () => pageProvider.goTo(3)),
+                CustomMenuItemWidget(text: 'Location', delay: 300, onPressed: () => pageProvider.goTo(4)),
                 SizedBox(height: 8,)
               ]
             ]
