@@ -1,13 +1,17 @@
 
 
-import 'dart:js';
 
 import 'package:fluro/fluro.dart';
+import 'package:landing_page_flutter/provider/page_provider.dart';
 import 'package:landing_page_flutter/ui/page/home_page.dart';
+import 'package:provider/provider.dart';
 
 final homeHandler = Handler(handlerFunc: (context, params){
 
   final String page = params['page']?.first ?? "/";
-  if(page != '/')
+  if(page != '/'){
+    final pageProvider = Provider.of<PageProvider>(context!, listen: false);
+    pageProvider.createScrollController(page);
     return HomePage();
+  }
 });
