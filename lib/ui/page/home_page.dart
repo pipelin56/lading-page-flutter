@@ -4,6 +4,7 @@ import 'package:landing_page_flutter/ui/view/contact_view.dart';
 import 'package:landing_page_flutter/ui/view/home_view.dart';
 import 'package:landing_page_flutter/ui/view/location_view.dart';
 import 'package:landing_page_flutter/ui/view/pricing_view.dart';
+import 'package:landing_page_flutter/ui/shared/custom_app_menu_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage
@@ -19,11 +20,7 @@ class HomePage extends StatelessWidget {
           Positioned(
             right: 20,
             top: 20,
-            child: Container(
-              width: 150,
-              height: 50,
-              color: Colors.black,
-            )
+            child: CustomAppMenuWidget()
           )
         ],
       ),
