@@ -1,10 +1,13 @@
+
 import 'package:flutter/material.dart';
+import 'package:landing_page_flutter/provider/page_provider.dart';
+import 'package:landing_page_flutter/ui/shared/custom_app_menu_widget.dart';
 import 'package:landing_page_flutter/ui/view/about_view.dart';
 import 'package:landing_page_flutter/ui/view/contact_view.dart';
 import 'package:landing_page_flutter/ui/view/home_view.dart';
 import 'package:landing_page_flutter/ui/view/location_view.dart';
 import 'package:landing_page_flutter/ui/view/pricing_view.dart';
-import 'package:landing_page_flutter/ui/shared/custom_app_menu_widget.dart';
+import 'package:provider/provider.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage
@@ -44,9 +47,15 @@ class HomePage extends StatelessWidget {
   }
 
 class _HomeBody extends StatelessWidget {
+
+
   @override
   Widget build(BuildContext context) {
+
+  final pageProvider = Provider.of<PageProvider>(context, listen: false);
+
     return PageView(
+      controller: pageProvider.scrollController,
       scrollDirection: Axis.vertical,
       children: [
         HomeView(),

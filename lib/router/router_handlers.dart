@@ -7,5 +7,7 @@ import 'package:landing_page_flutter/ui/page/home_page.dart';
 
 final homeHandler = Handler(handlerFunc: (context, params){
 
-  return HomePage();
+  final String page = params['page']?.first ?? "/";
+  if(page != '/')
+    return HomePage();
 });
